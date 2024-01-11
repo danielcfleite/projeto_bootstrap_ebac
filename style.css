@@ -1,6 +1,36 @@
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .nav {
-  background: transparent;
-  gap: 2rem;
+  height: 13vh;
+  background-color: #242424;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #9bd155;
+  padding: 0 5vw;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0 020px 20px;
+  margin-top: -1%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 body {
@@ -49,4 +79,256 @@ body {
 
 .active {
   border-bottom: 2px solid #e58e27;
+}
+
+#card-wrapper {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-wrapper input {
+  border: none;
+  border-radius: 10px;
+  padding: 0.3rem;
+  height: 2.5rem;
+  width: 18.75rem;
+  margin-right: 0.4rem;
+}
+
+#search-wrapper button {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #e58e27;
+  color: white;
+}
+
+.card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.title-and-rating {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 3.125rem;
+}
+
+.game-details {
+  height: 6.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-titles {
+  color: #e58e27;
+}
+
+.card-body {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.genre {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ph-game-controller {
+  align-self: center;
+}
+
+.card-title {
+  height: 3.125rem;
+}
+
+.game-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.genre {
+  width: 100%;
+}
+
+.shop-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  width: 60%;
+}
+
+.finished {
+  background-color: grey;
+  color: #161a1e;
+  cursor: not-allowed !important;
+  border: none;
+  outline: none;
+}
+
+.finished:hover {
+  background-color: grey;
+  color: #161a1e;
+  cursor: not-allowed !important;
+  border: none;
+  outline: none;
+}
+
+#game-attributes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#game-attributes p {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+#advaced-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+#github {
+  font-size: 1.5rem;
+  border: none;
+}
+
+#github:hover {
+  animation: background-pan 1.5s linear infinite;
+  background: linear-gradient(
+    to right,
+    rgb(213, 34, 165),
+    rgb(220, 60, 212),
+    rgb(224, 91, 167),
+    rgb(220, 62, 172)
+  );
+  background-size: 200%;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.genre-check {
+  width: 50%;
+}
+
+.content-game-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#thumb {
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover;
+}
+
+#game-title {
+  color: #e58e27;
+}
+
+#screenshots-display {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#screenshots-display img {
+  width: 100%;
+}
+
+#go-back {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-transform: uppercase;
+  position: fixed;
+  background-color: #e58e27;
+  padding: 0.5rem;
+  border-radius: 15px;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  #carouselExampleFade {
+    width: 75vw;
+    padding: 0;
+  }
+
+  #game-attributes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #game-attributes p {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #screenshots-display {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #carouselExampleFade {
+    width: 80%;
+  }
 }
