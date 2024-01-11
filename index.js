@@ -1,10 +1,8 @@
-let nextGameListUrl = null;
-let games = [{}];
-import dotenv from "dotenv";
-dotenv.config();
-const key = process.env.key;
+const key = "9cc969683fe1467f86f9d3914dfc5f9b";
 const url = `https://api.rawg.io/api/games?key=${key}&dates=2023-01-01,2024-01-01&ordering=-added`;
 const urlGenre = `https://api.rawg.io/api/genres?key=${key}&ordering=-added`;
+let nextGameListUrl = null;
+let games = [{}];
 
 const getGenresStr = (genres) => {
   const allGenres = genres.map((each) => each.name).join(", ");
@@ -216,10 +214,6 @@ function createPage() {
   );
 }
 
-$("#go-back").click((e) => {
-  window.location.href = "./index.html";
-});
+getGenres(urlGenre);
 
-// getGenres(urlGenre);
-
-// loadGames(url);
+loadGames(url);
