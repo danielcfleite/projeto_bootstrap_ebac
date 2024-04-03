@@ -30,9 +30,9 @@ https://projeto-bootstrap-ebac.vercel.app/store.html
 This project uses the following technologies: 
 
 - HTML & CSS
-- Typescript
-- React
-- Vite
+- Bootstrap
+- Jquery
+- Rest Api
 
 
 
